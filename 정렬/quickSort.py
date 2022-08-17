@@ -7,7 +7,7 @@
 
 array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
 
-
+#방법1: 
 def quick_sort(array, start, end):
     if start >= end:
         return
@@ -29,3 +29,17 @@ def quick_sort(array, start, end):
 quick_sort(array,0,len(array)-1)
 
 print("array:", array)
+
+#방법2:
+
+def quick_sort2(array):
+    if len(array)<=1:
+        return array
+    pivot=array[0]
+    tail=array[1:]
+
+    left_side=[x for x in tail if x <=pivot]
+    right_side=[x for x in tail if x>pivot]
+
+    return quick_sort2(left_side)+[pivot]+quick_sort2(right_side)
+print("quick_sort2:",quick_sort2(array))
