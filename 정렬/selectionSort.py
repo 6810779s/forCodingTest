@@ -1,4 +1,4 @@
-# 선택정렬
+# 선택정렬 (Selection Sort)
 # 시간복잡도: O(N**2)
 array=[7,5,9,0,3,1,6,2,4,8]
 for i in range(len(array)):
